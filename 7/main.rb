@@ -67,4 +67,6 @@ def all_bags(bags)
     bags.get_bag("shiny gold").all_children.length - 1
 end
 
-puts all_bags(make_bags(read_input))
+if __FILE__ == $0
+  puts all_bags(make_bags(read_input))
+end
