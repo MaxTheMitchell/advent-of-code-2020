@@ -19,7 +19,7 @@ def parse_data(input)
   [input.split(" ")[0], input[/\d+/].to_i * (input[/-/] ? -1 : 1)]
 end
 
-def try_all(data)
+def try_all
   data = read_input.map { |i| parse_data(i) }
   data.length.times do |i|
     dup_data = read_input.map { |i| parse_data(i) }
@@ -30,8 +30,8 @@ def try_all(data)
       dup_data[i][0] = "jmp"
     end
     result = run(dup_data)
-    puts(result) if result != nil
+    return result if result != nil
   end
 end
 
-try_all(read_input.map { |i| parse_data(i) })
+puts try_all
