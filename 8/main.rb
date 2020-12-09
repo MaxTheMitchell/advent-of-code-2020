@@ -22,7 +22,7 @@ end
 def try_all
   data = read_input.map { |i| parse_data(i) }
   data.length.times do |i|
-    dup_data = read_input.map { |i| parse_data(i) }
+    dup_data = data.map { |i| i.dup }
     case data[i][0]
     when "jmp"
       dup_data[i][0] = "nop"
