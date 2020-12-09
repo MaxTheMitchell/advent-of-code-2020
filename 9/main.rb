@@ -25,5 +25,5 @@ def solve_gold(data)
   end
 end
 
-puts solve_slver(read_input)
+puts solve_slver(25, read_input)
 puts solve_gold(read_input)
