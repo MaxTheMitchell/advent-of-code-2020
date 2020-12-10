@@ -1,9 +1,11 @@
+
+
 def read_input
   File.new("./input.txt").read.split("\n").map(&:to_i)
 end
 
 def is_valid?(val, numbs)
-  numbs.combination(2).to_a.map(&:sum).include?(val)
+  numbs.combination(2).map(&:sum).include?(val)
 end
 
 def solve_slver(preamble, d)
